@@ -39,16 +39,40 @@
         
         
         }
+        
+        /* Regra de CSS 
+        Usando seletor CLASSE */
 
 
         .centralizar{text-align: center;}
 
+        .destaque {
+
+            background-color: wheat;
+            border: solid 2px blue;
+
+
+        }
+
+
+
+        /* Regra CSS 
+        Usando seletor ID (IDENTIFICADOR) */
+
+        #listas {
+
+            background-color: pink;
+            box-shadow: black 1px 1px 3px;
+            padding: 8px;
+
+        }
+ 
     </style>
 
 
 </head>
 <body>
-    <h1>Trabalhando com listas</h1>
+    <h1 class="centralizar destaque">Trabalhando com listas</h1>
     
     
     <p>Conteúdo representado na forma de uma relação de itens</p>
@@ -57,10 +81,11 @@
 
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur mollitia cupiditate</p>
 
+
    
    
    
-   
+   <div id="listas">
     <h2>Não-ordenado</h2>
     <ul>
         <li>Limão</li>
@@ -80,7 +105,7 @@
         <li>Aguardar o sistema carregar</li>
         <li>Procurar o app desejado</li>
     </ol>
-
+</div>
     <!-- Significado das tags
     ul: unordered list
     ol: ordered list
