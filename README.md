@@ -1,3 +1,4 @@
+🚀projetos🚀
 # Atividades de estudos de Front-end
 
 ## HTML
@@ -18,4 +19,4 @@ o CSS é aplicado diretamente em cada tag HTML.
 
 O CSS é criado usando regras (com seletores, propriedades e valor) dentro da própria página que queremos formatar. 
 
-As regras vão valer para todas as tags/elementos desta páginas. 
+As regras vão valer para todas as tags/elementos
