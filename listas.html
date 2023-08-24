@@ -12,19 +12,50 @@
 
         h1 {color: green;}
 
-        /* Diferente do CSS inline, aqui o style não é um atributo e sim uma tag, sendo assim, para acrescentar alguma alteração ao seu HTML é necessário estar dentro da tag style que deve estar OBRIGATORIAMENTE dentro da tag head. Após o seu style, escolha seu seletor ( que no caso foi o h1) e faça a sua alteração. */
+        /* Diferente do CSS inline, aqui o style não é um atributo e sim uma tag, sendo assim, para acrescentar alguma alteração ao seu HTML é necessário estar dentro da tag style que deve estar OBRIGATORIAMENTE dentro da tag head. Após o seu style, escolha seu seletor tag ( que no caso foi o h1) e faça a sua alteração. */
+
+        /* seletor tag: seleciona todas as tags, por exemplo, dentro do style vc seleciona a tag h1, diante disso todos os textos que estão nas tags h1 serão modificados */
+
+        h2 {
+            color: blue;
+            text-transform: uppercase;
+            background-color: cyan;
+        }
+
+        /* Mini-exercício (faça aqui mesmo)
+        Crie uma regra para formatar parágrafos da seguinte maneira:
+        -Mude a letra para Verdana
+        -Mude o tamanho da letra para 20px
+        -Faça o texto ficar em itálico */
+
+        p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            font-style: italic;
+
+
 
         
+        
+        
+        }
 
 
+        .centralizar{text-align: center;}
 
     </style>
+
+
 </head>
 <body>
     <h1>Trabalhando com listas</h1>
     
     
     <p>Conteúdo representado na forma de uma relação de itens</p>
+
+    <p class="centralizar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, officiis vitae.</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima consequatur mollitia cupiditate</p>
 
    
    
