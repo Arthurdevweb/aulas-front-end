@@ -1,4 +1,3 @@
-# aulas-front-end
 # Atividades de estudos de Front-end
 
 ## HTML
@@ -13,6 +12,10 @@ CSS é uma sigla que significa "folhas de estilos em cascata", e possui 3 formas
 
 ### inline 
 
-o CSS é aplicado diretamente em cada tag HTML
+o CSS é aplicado diretamente em cada tag HTML.
 
+### Interna ou OnPage (na página)
 
+O CSS é criado usando regras (com seletores, propriedades e valor) dentro da própria página que queremos formatar. 
+
+As regras vão valer para todas as tags/elementos desta páginas. 
