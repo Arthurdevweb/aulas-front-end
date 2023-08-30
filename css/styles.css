@@ -34,6 +34,9 @@ h1 {
 
     -webkit-text-stroke: 1px red;
 
+    animation-name: caindo;
+    animation-duration: 2s;
+
 
     
 
@@ -65,6 +68,7 @@ border-right: dashed 5px;
 border-top: solid 5px;
 display: inline-block; 
 padding: 5px;
+
 
 /*caso queira colocar uma borda apenas em volta das letras use a propriedade "display: inline-block". Como foi mostrado no exemplo.*/  
 
@@ -130,10 +134,94 @@ ul {
 }
 
 
-/*  */
+/* Seletor PSEUDO-ELEMENTO 
+(usa 2 vezes os dois pontos ::) */
 li::marker {
 
-    content: "💚";
+    content: "💚 ";
+
+}
+
+
+/* Regras para o menu */
+
+nav {
+    text-align: center;
+}
+
+/* Regra para o estado inicial do link */
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color:darkblue;
+    width: 50%;
+    display: inline-block;
+    padding: 10px;
+    background-color: grey;
+
+    /* Alterando o Box Model fazendo com que Padding e border não dê B.O  nas dimenções finais do elemento */
+    box-sizing: border-box;
+   
+    }
+    
+    /* Seletor pseudo-classe :first-child */
+
+nav a:first-child{
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+
+}
+
+nav a:last-child{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+}
+    
+
+
+
+
+
+/* Regra para o estado do link adicionado 
+Pseudo-classe :hover (passar o mouse)   */
+
+nav a:hover, nav a:focus {
+    background-color: black;
+    color: white;
 
 
 }
+
+
+figure img {
+    filter: grayscale();
+    /* clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); */
+    transition: 0.5s;
+    transform: scale(0.8);
+}
+
+
+figure img:hover { 
+    /* clip-path: polygon(0 0, 50% 8%, 100% 0, 100% 51%, 100% 100%, 50% 92%, 0 100%); */
+    filter: none;
+    transform: scale(1) /*rotate(360deg);*/
+
+}
+
+
+/* Regras de animação */
+
+@keyframes caindo {
+    /* Como começa: */
+    from {transform: translateY(-100px); }
+    /* como termina: */
+    to { transform: translateY(0)}
+    opacity: 0;
+}
+
+
+
+
+
+
