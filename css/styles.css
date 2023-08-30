@@ -32,14 +32,11 @@ h1 {
     text-transform: uppercase;
     /* para fazer a borda não é necessário fazer todos esses tipos de borda, pois são para modificações mais especificas. Sendo assim, utilize a tag "border" */
 
-    -webkit-text-stroke: 1px red;
+    -webkit-text-stroke: 0.5px red ;
 
     animation-name: caindo;
     animation-duration: 2s;
-
-
-    
-
+    box-shadow: red 3px 3px 10px;
 
 }
 
@@ -219,6 +216,9 @@ figure img:hover {
     to { transform: translateY(0)}
     opacity: 0;
 }
+
+
+figure img 
 
 
 
