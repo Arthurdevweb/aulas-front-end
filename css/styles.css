@@ -196,14 +196,14 @@ nav a:hover, nav a:focus {
 
 figure img {
     filter: grayscale();
-    /* clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); */
+     clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); 
     transition: 0.5s;
     transform: scale(0.8);
 }
 
 
 figure img:hover { 
-    /* clip-path: polygon(0 0, 50% 8%, 100% 0, 100% 51%, 100% 100%, 50% 92%, 0 100%); */
+     clip-path: polygon(0 0, 50% 8%, 100% 0, 100% 51%, 100% 100%, 50% 92%, 0 100%);
     filter: none;
     transform: scale(1) /*rotate(360deg);*/
 
