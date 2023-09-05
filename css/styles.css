@@ -227,7 +227,7 @@ figure img:hover {
     from {transform: translateY(-100px); }
     /* como termina: */
     to { transform: translateY(0)}
-    opacity: 0;
+   opacity: 0; 
 }
 
 
