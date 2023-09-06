@@ -1,47 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title> Layout Responsivo</title>
+
+    <style>
+        /* box-sizing serve para alteral o box model, ou seja, para não precosar ficar alterando o padding ou margim para que dê 100%, o próprio navegador vai fazer isso automaticamente */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: lightblue;
+        }
+
+        .container {
+            background-color: lightgreen;
+            box-shadow: black 0 0 5px;
+            padding: 5px;
+        }
+
+        /* CSS reset (em alguns elementos) */
+
+        h1,
+        h2,
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            padding: 5px 0;
+        }
+
+        h1 {
+            background-color: palevioletred;
+        }
+
+        nav {
+            background-color: yellow;
+        }
+
+        article {
+            padding: 8px;
+        }
+
+        #colunaA {
+            background-color: orange;
+        }
+
+        #colunaB {
+            background-color: purple;
+        }
+
+        #colunaC {
+            background-color: blue;
+        }
+
+        footer {
+            background-color: gray;
+            height: 100px;
+        }
+
+        /* Regras condicionais */
+
+        @media screen and (min-width: 522px) {
+            header {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            h1 {
+                width: 40%;
+            }
+
+            nav {
+                width: 60%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+        }
+
+        @media screen and (min-width: 780px) {
+            #colunaA {
+                width: 70%;
+            }
+
+            #colunaB {
+                width: 30%;
+            }
+
+            #colunaC {
+                width: 100%;
+            }
+
+            main {
+                display: flex;
+
+
+                /* flex-wrap quando habilitado faz com que os elementos sejam "quebrados" para a linha de baixo caso não haja espaço. */
+                flex-wrap: wrap
+            }
+
+        }
+
+        @media screen and (min-width: 1106px) {
+           .container  {
+           
+            max-width: 1106px;
+            margin: auto;
+        }
+
+        header {
+            height: 100px;
+        }
+
+        #colunaA,#colunaB, #colunaC {
+            width: 33%;
+        }
+
+        /* Desative o flex-wrap se você precisa que realmente as colunas se mantenhamlado a lado */
+        main {flex-wrap: nowrap;
+                /* gap: 16px */
+            justify-content: space-between;
+            
+            
+            }
+            
+            
+        }
+    </style>
+
+
 </head>
+
 <body>
-<div class="container">
+    <div class="container">
 
-<header>
-    <h1>Exemplo</h1>
-    <nav>
-        <a href="">link 1</a>
-        <a href="">link 2</a>
-        <a href="">link 3</a>
-    </nav>
-</header>
+        <header>
+            <h1>Exemplo</h1>
+            <nav>
+                <a href="">link 1</a>
+                <a href="">link 2</a>
+                <a href="">link 3</a>
+            </nav>
+        </header>
 
-    
-<main>
-    <article id="ColunaA">
-        <h2>Culuna  A</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ut placeat sed perferendis nulla asperiores ab aliquam dolor praesentium dolores! Repellat officia esse, quam dicta delectus incidunt tenetur obcaecati iusto!</p>
-    </article>
-    
 
-    <article id="ColunaB">
-        <h2>Coluna B</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In qui suscipit similique deserunt iste mollitia eum! Veniam aut neque explicabo. In doloribus itaque commodi quibusdam sunt placeat, natus iste doloremque!</p>
-    </article>
+        <main>
+            <article id="colunaA">
+                <h2>Culuna A</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ut placeat sed perferendis nulla
+                    asperiores ab aliquam dolor praesentium dolores! Repellat officia esse, quam dicta delectus incidunt
+                    tenetur obcaecati iusto!</p>
+            </article>
 
-    <article id="ColunaC">
-        <h2>Coluna C</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem itaque aut quae alias nulla suscipit dignissimos beatae natus. Nemo inventore delectus error eveniet consequuntur numquam, amet necessitatibus quod at vitae!</p>
-    </article>
 
-</main>
+            <article id="colunaB">
+                <h2>Coluna B</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In qui suscipit similique deserunt iste
+                    mollitia eum! Veniam aut neque explicabo. In doloribus itaque commodi quibusdam sunt placeat, natus
+                    iste doloremque!</p>
+            </article>
 
-    <footer>
-        <h2>Rodapé</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto magnam ab nesciunt, sint aut porro itaque et non ipsam iste eligendi repellat, atque rerum accusamus perferendis neque deleniti soluta? Explicabo.</p>
-    </footer>
+            <article id="colunaC">
+                <h2>Coluna C</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem itaque aut quae alias nulla suscipit
+                    dignissimos beatae natus. Nemo inventore delectus error eveniet consequuntur numquam, amet
+                    necessitatibus quod at vitae!</p>
+            </article>
 
-</div>
+        </main>
+
+        <footer>
+            <h2>Rodapé</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, quia?
+            </p>
+        </footer>
+
+    </div>
 </body>
+
 </html>
